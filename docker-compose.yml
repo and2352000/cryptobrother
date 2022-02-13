@@ -6,7 +6,7 @@ services:
     image: wordpress:5.9.0-php7.4-apache
     restart: always
     ports:
-      - 8080:80
+      - ${WORDPRESS_PROT}:80
     environment:
       WORDPRESS_DB_HOST: db
       WORDPRESS_DB_NAME: ${DB_NAME}
